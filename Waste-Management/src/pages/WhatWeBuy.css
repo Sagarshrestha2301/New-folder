@@ -1,0 +1,214 @@
+.what-we-buy {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.what-we-buy h1 {
+  color: #00a86b;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.what-we-buy h1:hover {
+  transform: scale(1.05);
+}
+
+.what-we-buy .categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.what-we-buy .categories button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  transition: color 0.3s ease-out, transform 0.2s ease;
+  position: relative;
+}
+
+.what-we-buy .categories button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #00a86b;
+  transition: all 0.3s ease-out;
+}
+
+.what-we-buy .categories button:hover {
+  color: #00a86b;
+  transform: translateY(-2px);
+}
+
+.what-we-buy .categories button:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.what-we-buy .categories button.active {
+  color: #00a86b;
+  border-bottom: 2px solid #00a86b;
+}
+
+.what-we-buy .items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.what-we-buy .item-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.what-we-buy .item-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.what-we-buy .item-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.what-we-buy .item-card:hover img {
+  transform: scale(1.05);
+}
+
+.what-we-buy .item-card h3 {
+  color: #00a86b;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.what-we-buy .item-card:hover h3 {
+  color: #007f4e;
+}
+
+.what-we-buy .item-card .price {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.what-we-buy .item-card:hover .price {
+  color: #00a86b;
+}
+
+.what-we-buy .item-card .description {
+  color: #666;
+  font-size: 0.8em;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.what-we-buy .item-card:hover .description {
+  color: #333;
+}
+
+/* Responsive Breakpoints */
+
+@media (min-width: 576px) {
+  .what-we-buy {
+    padding: 25px;
+  }
+
+  .what-we-buy h1 {
+    font-size: 2.2em;
+  }
+
+  .what-we-buy .categories button {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+
+  .what-we-buy .items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .what-we-buy {
+    padding: 30px;
+  }
+
+  .what-we-buy h1 {
+    font-size: 2.3em;
+  }
+
+  .what-we-buy .categories button {
+    font-size: 16px;
+  }
+
+  .what-we-buy .items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
+  }
+
+  .what-we-buy .item-card h3 {
+    font-size: 1.2em;
+  }
+
+  .what-we-buy .item-card .price {
+    font-size: 1.1em;
+  }
+
+  .what-we-buy .item-card .description {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 992px) {
+  .what-we-buy {
+    max-width: 960px;
+    padding: 40px;
+  }
+
+  .what-we-buy h1 {
+    font-size: 2.4em;
+  }
+
+  .what-we-buy .items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .what-we-buy {
+    max-width: 1140px;
+  }
+
+  .what-we-buy h1 {
+    font-size: 2.5em;
+  }
+
+  .what-we-buy .items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (min-width: 1400px) {
+  .what-we-buy {
+    max-width: 1320px;
+  }
+}

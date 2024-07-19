@@ -1,0 +1,87 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .frontPage {
+    background-image: url("/assets/back.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .welcome-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .welcome-content h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .welcome-content p {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  
+  .welcome-content button {
+    background-color: #00a86b;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s;
+  }
+  
+  .welcome-content button:hover {
+    background-color: #008c5a;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .frontPage {
+      height: auto;
+      min-height: 100vh;
+    }
+  }
+  
+  /* Add these animation classes if they're not already in your CSS */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .animate-slideUp {
+    animation: slideUp 1s ease-out;
+  }
+  
+  .animate-scaleIn {
+    animation: scaleIn 1s ease-out;
+  }

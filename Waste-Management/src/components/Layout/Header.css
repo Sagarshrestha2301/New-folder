@@ -1,0 +1,156 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 16px;
+  position: relative;
+  z-index: 1000;
+}
+
+
+.logo {
+  height: 30px;
+}
+
+ul {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+ul.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+li {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1ed41e;
+}
+
+a svg {
+  margin-right: 0.5rem;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #333;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.hamburger.open span:first-child {
+  transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+  nav {
+    padding: 20px 30px;
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 0;
+  }
+  
+  li {
+    margin: 0 0 0 1rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    padding: 20px 40px;
+    font-size: 18px;
+  }
+  
+  .logo {
+    height: 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    padding: 20px 50px;
+    font-size: 19px;
+  }
+  
+  .logo {
+    height: 38px;
+  }
+}
+
+@media (min-width: 1400px) {
+  nav {
+    padding: 20px 60px;
+    font-size: 20px;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  li {
+    margin-left: 1.5rem;
+  }
+}

@@ -1,0 +1,88 @@
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    background: url(../../../public/assets/register.jpg);
+    background-size: cover;
+  background-position: center;
+
+    opacity: 0.8;
+
+    
+  }
+  
+  .auth-container {
+    background: rgba(255, 255, 255, 100);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .auth-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .auth-form button {
+    background-color: #42b72a;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .auth-form button:hover {
+    background-color: #36a420;
+  }
+  
+  .message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .message.error {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .auth-form p {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .auth-form a {
+    color: #1877f2;
+    text-decoration: none;
+  }
+  
+  .auth-form a:hover {
+    text-decoration: underline;
+  }

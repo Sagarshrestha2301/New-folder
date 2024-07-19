@@ -1,0 +1,126 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footerImg {
+  background: url(../../../public/assets/footer-banner.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 50vh;
+  padding: 2rem 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.company-info {
+  flex: 1 1 100%;
+  margin-bottom: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.footer-section {
+  flex: 1 1 calc(33.333% - 2rem);
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* Large screens (Desktops, large tablets) */
+@media (min-width: 1200px) {
+  .footer-content {
+    padding: 0 2rem;
+  }
+}
+
+/* Medium screens (Tablets, small desktops) */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .footerImg {
+    min-height: 40vh;
+  }
+  
+  .footer-section {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+/* Small screens (Large phones, small tablets) */
+@media (max-width: 768px) {
+  .footerImg {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .company-info {
+    margin-right: 0;
+  }
+  
+  .footer-section {
+    flex: 1 1 100%;
+    margin-top: 0;
+  }
+}
+
+/* Extra small screens (Mobile phones) */
+@media (max-width: 480px) {
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .social-icons a {
+    font-size: 1.3rem;
+  }
+}
+
+/* For better touch targets on mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  .footer-section a,
+  .social-icons a {
+    padding: 0.5rem 0;
+    display: inline-block;
+  }
+}

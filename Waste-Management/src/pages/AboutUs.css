@@ -1,0 +1,501 @@
+/* General styles */
+.about-us {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles with animation */
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Section styles with hover effect */
+.mission-section,
+.community-impact,
+.vision {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-section:hover,
+.community-impact:hover,
+.vision:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Section headings with underline animation */
+.mission-section h2,
+.community-impact h2,
+.vision h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.mission-section h2::after,
+.community-impact h2::after,
+.vision h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+.mission-section:hover h2::after,
+.community-impact:hover h2::after,
+.vision:hover h2::after {
+  width: 100%;
+}
+
+/* Paragraph styles */
+.mission-section p,
+.community-impact p,
+.vision p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation for sections */
+.mission-section {
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.community-impact {
+  animation: fadeInUp 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.vision {
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+
+
+
+.waste-management-images {
+  margin: 2rem 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.8s forwards;
+}
+
+.waste-management-images h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.waste-management-images h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+.waste-management-images:hover h2::after {
+  width: 100%;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.image-item {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.image-item:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.image-item:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.image-item:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.image-item:nth-child(4) {
+  animation-delay: 1.6s;
+}
+
+.image-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-item p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #34495e;
+  transition: color 0.3s ease;
+}
+
+.image-item:hover p {
+  color: #3498db;
+}
+
+/* ... (rest of the CSS remains the same) ... */
+
+/* Add this new animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* Team section styles */
+.team-section {
+  margin-top: 4rem;
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.member-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.member-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, #daf4d6, #ece9e1, #e8eef0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.1);
+}
+
+.team-member:hover .member-image::before {
+  opacity: 1;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Animation for team members */
+.team-member {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  margin-bottom: 5rem;
+}
+
+.team-member:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.team-member:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.team-member:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Responsive adjustments */
+/* Responsive design */
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .about-us {
+    padding: 1.5rem;
+  }
+  
+  .about-header h1 {
+    font-size: 2.3rem;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .about-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .mission-section h2,
+  .community-impact h2,
+  .vision h2 {
+    font-size: 1.6rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .about-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .about-header p {
+    font-size: 1rem;
+  }
+
+  .mission-section,
+  .community-impact,
+  .vision {
+    padding: 1.2rem;
+  }
+
+  .mission-section h2,
+  .community-impact h2,
+  .vision h2 {
+    font-size: 1.4rem;
+  }
+
+  .mission-section p,
+  .community-impact p,
+  .vision p {
+    font-size: 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .member-image {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .about-us {
+    padding: 1rem;
+  }
+
+  .about-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .mission-section,
+  .community-impact,
+  .vision {
+    padding: 1rem;
+  }
+
+  .mission-section h2,
+  .community-impact h2,
+  .vision h2 {
+    font-size: 1.3rem;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Mobile-specific breakpoints */
+/* Large mobile devices (576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .mission-section h2,
+  .community-impact h2,
+  .vision h2 {
+    font-size: 1.5rem;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium mobile devices (between 400px and 575px) */
+@media (min-width: 400px) and (max-width: 575.98px) {
+  .about-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .mission-section h2,
+  .community-impact h2,
+  .vision h2 {
+    font-size: 1.4rem;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small mobile devices (less than 400px) */
+@media (max-width: 399.98px) {
+  .about-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-header p {
+    font-size: 0.9rem;
+  }
+
+  .mission-section h2,
+  .community-impact h2,
+  .vision h2 {
+    font-size: 1.2rem;
+  }
+
+  .mission-section p,
+  .community-impact p,
+  .vision p {
+    font-size: 0.9rem;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-member h3 {
+    font-size: 1.2rem;
+  }
+
+  .team-member p {
+    font-size: 0.8rem;
+  }
+}
+
+/* For better touch targets on mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  .mission-section,
+  .community-impact,
+  .vision,
+  .image-item,
+  .team-member {
+    transition: none;
+  }
+
+  .mission-section:hover,
+  .community-impact:hover,
+  .vision:hover,
+  .image-item:hover img,
+  .team-member:hover .member-image img {
+    transform: none;
+  }
+}
+
