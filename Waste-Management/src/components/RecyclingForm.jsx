@@ -24,7 +24,7 @@ const RecyclingForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://waste-management-sigma.vercel.app/api/recycling/submit', formData);
+      const response = await axios.post('http://localhost:8080/api/recycling/submit', formData);
       console.log("Form submitted:", response.data);
       setSubmitStatus('success');
       setFormData({
