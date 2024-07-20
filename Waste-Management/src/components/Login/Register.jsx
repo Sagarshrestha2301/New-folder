@@ -22,7 +22,7 @@ const Register = () => {
     setMessage('');
     setIsError(false);
     try {
-      const res = await axios.post('https://waste-management-sigma.vercel.app/api/auth/register', formData);
+      const res = await axios.post('http://localhost:8080/api/auth/register', formData);
       console.log(res.data);
       setMessage('Registration successful!');
       setTimeout(() => {
