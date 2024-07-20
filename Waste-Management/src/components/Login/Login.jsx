@@ -24,7 +24,7 @@ const Login = () => {
     setIsError(false);
 
     try {
-      const response = await axios.post("http://localhost:8080/api/auth/login", formData);
+      const response = await axios.post("https://waste-management-sigma.vercel.app/api/auth/login", formData);
       console.log(response.data);
       const token = response.data.token;
       loginUser(token);  // Use the loginUser function from auth.js
