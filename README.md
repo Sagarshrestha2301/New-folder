@@ -8,17 +8,34 @@
 
 - Backend:
   - Node.js
-  - Express.js (assumed based on typical setups)
-  - Database (not specified, but likely included)
+  - Express.js 
+  - Database (MongoDB)
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js (latest stable version)
-- npm or yarn
-
+- npm 
 ### Installation
 
 1. Clone the repository
-2. 
+https://github.com/Sagarshrestha2301/WasteManagement
+
+2. Frontend Setup
+
+cd Waste-Management
+npm install
+
+
+3. Backend Setup
+cd backend
+npm install
+
+### Running the Application
+
+1. Start the frontend
+npm run dev
+
+2. Start the backend
+npm start
